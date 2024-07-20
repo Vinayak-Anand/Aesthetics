@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { ClerkProvider, SignedIn, SignedOut, SignIn, SignInButton, UserButton } from "@clerk/nextjs";
+import { ClerkProvider, SignedIn, SignedOut, SignIn, SignInButton, SignUp, UserButton } from "@clerk/nextjs";
 
 const IBMPlex = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -25,19 +25,8 @@ export default function RootLayout({
       variables: { colorPrimary: '#624cf5' }
     }}>
       <html lang="en">
-      
         <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
-        <header>
-            <SignedOut>
-              <main className="auth">
-              <SignIn routing="hash" />
-              </main>
-            </SignedOut>
-            <SignedIn>
-              {children}
-            </SignedIn>
-          </header>
-          
+          {children}
         </body>
       </html>
     </ClerkProvider>
