@@ -1,2 +1,0 @@
-Myuue7elyP6xoOc8
-mongodb+srv://vinayak:Myuue7elyP6xoOc8@cluster0.mnxtvuz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
